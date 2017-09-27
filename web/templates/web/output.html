@@ -1,0 +1,158 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/font-icons.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css" />
+
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Title</title>
+</head>
+<body>
+
+<section id="page-title">
+
+        <div class="container clearfix">
+            <h1>자동 환자 인식 생성기</h1>
+            <span>중소형 병원 및 환자 라벨 생성 프로그램</span>
+        </div>
+
+		</section><!-- #page-title end -->
+    <section id="content">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+                <div class="row">
+                    <div class="col-md-offset-4 col-md-4 col-xs-12" style="">
+                        <div style="border: 1px solid #d7d7d7;padding: 15px;">
+                            <div class="feature-box fbox-rounded fbox-effect">
+							    <div class="fbox-icon">
+								    <a href="#"><i class="icon-" name="icons"></i></a>
+							    </div>
+							    <h3>{{ name }}</h3>
+							    <p>{{ num }}</p>
+						    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-12">
+                        <div class="" style="position: absolute;z-index: 1;left: 300px;top:14px;">
+                            <div>
+                                <div class="feature-box fbox-rounded fbox-effect">
+							        <div class="fbox-icon" style="height: 50px;width: 50px;">
+								        <a href="#"><i class="icon-" name="icons"></i></a>
+							        </div>
+							        <h3>{{ name }}</h3>
+							        <p style="margin: 0px;">{{ num }}</p>
+						        </div>
+                            </div>
+                        </div>
+                        <div class="" style="position: absolute;z-index: 1;left: 300px;top:90px;">
+                            <div>
+                                <div class="feature-box fbox-rounded fbox-effect">
+							        <div class="fbox-icon" style="height: 50px;width: 50px;">
+								        <a href="#"><i class="icon-" name="icons"></i></a>
+							        </div>
+							        <h3>{{ name }}</h3>
+							        <p style="margin: 0px;">{{ num }}</p>
+						        </div>
+                            </div>
+                        </div>
+                        <div class="" style="position: absolute;z-index: 1;left: 300px;top:170px;">
+                            <div>
+                                <div class="feature-box fbox-rounded fbox-effect">
+							        <div class="fbox-icon" style="height: 50px;width: 50px;">
+								        <a href="#"><i class="icon-" name="icons"></i></a>
+							        </div>
+							        <h3>{{ name }}</h3>
+							        <p style="margin: 0px;">{{ num }}</p>
+						        </div>
+                            </div>
+                        </div>
+                        <div class="" style="position: absolute;z-index: 1;left: 300px;top:252px;">
+                            <div>
+                                <div class="feature-box fbox-rounded fbox-effect">
+							        <div class="fbox-icon" style="height: 50px;width: 50px;">
+								        <a href="#"><i class="icon-" name="icons"></i></a>
+							        </div>
+							        <h3>{{ name }}</h3>
+							        <p style="margin: 0px;">{{ num }}</p>
+						        </div>
+                            </div>
+                        </div>
+                        <div class="" style="position: absolute;z-index: 1;left: 300px;top:330px;">
+                            <div>
+                                <div class="feature-box fbox-rounded fbox-effect">
+							        <div class="fbox-icon" style="height: 50px;width: 50px;">
+								        <a href="#"><i class="icon-" name="icons"></i></a>
+							        </div>
+							        <h3>{{ name }}</h3>
+							        <p style="margin: 0px;">{{ num }}</p>
+						        </div>
+                            </div>
+                        </div>
+                        <img src="{% static 'img/cont1-7.jpg' %}" alt="" style="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        var index = $('i[name=icons]');
+        var lists = ["share","rocket","plus-sign2","globe","wrench","bell","tint","gift","ok-sign","repeat","plane","magnet","folder-close","cogs","bullhorn2","coffee2","shield","microphone2"];
+        var icons = lists[Math.floor(Math.random() * lists.length)];
+
+        var options = {
+            background: [255, 255, 255, 255]
+        };
+        var data = new Identicon('d3b0'+randomString()+'7384d1eaa6'+randomString()+'2f43ds',options).toString();
+
+        for(var i in index){
+            // write to a data URI
+            index[i].innerHTML='<img width=420 height=420 src="data:image/png;base64,' + data + '">';
+{#            index[i].setAttribute('class','icon-'+icons);#}
+
+        }
+    });
+
+
+
+    function randomString() {
+        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+        var string_length = 10;
+        var randomstring = '';
+        for (var i=0; i<string_length; i++) {
+            var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+        }
+        return randomstring;
+    }
+</script>
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/pnglib.js' %}"></script>
+    <script src="{% static 'js/identicon.js'%}"></script>
+    <script>
+
+    </script>
+</body>
+</html>

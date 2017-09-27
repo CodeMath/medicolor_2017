@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/font-icons.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css" />
+
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Title</title>
+</head>
+<body>
+    <section id="page-title">
+
+        <div class="container clearfix">
+            <h1>자동 환자 인식 생성기</h1>
+            <span>중소형 병원 및 환자 라벨 생성 프로그램</span>
+        </div>
+
+		</section><!-- #page-title end -->
+    <section id="content">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-xs-12" style="border:1px solid #eeeeee;">
+                        <form action="" method="post" class="" style="padding: 15px;">
+                            {% csrf_token %}
+                            <div class="input-group" style="width: 100%;">
+                                <label for="">환자명:</label>
+                                <input type="text" name="name" value="" class="sm-form-control" style="width: 100%;">
+                            </div>
+                            <div class="input-group" style="width: 100%;">
+                                <label for="">환자코드:</label>
+                                <input type="text" name="num" value="" class="sm-form-control" style="width: 100%;">
+                            </div>
+                            <div class="input-group" style="margin-top: 15px;">
+                                <input type="submit" value="제출" class="btn btn-default">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="{% static 'js/functions.js' %}"></script>
+</body>
+</html>
